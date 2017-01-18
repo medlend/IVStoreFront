@@ -1,0 +1,22 @@
+<h2>Zones</h2>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>nom</th>
+        <th>couleur</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="zone in zones">
+        <td>{{zone.nom}}</td>
+        <td style="background-color:{{zone.couleur}};">{{zone.couleur}}</td>
+        <td><a href="#/edit/{{zone.id}}" class="btn btn-default btn-sm" ></a><i class="glyphicon glyphicon-pencil"></i></button></td>
+    </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary" href="#/add-user">Ajouter Zone</a>
+
+<div >
+    <h1>Zones</h1>
+    <canvas id="canvasList" ng-click="doClick($event)" width="600" height="700"></canvas>
+</div>

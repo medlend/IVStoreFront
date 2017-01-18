@@ -1,0 +1,23 @@
+<h2>Mettre a jour une zone</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form novalidate name="AddNewForm" id="add-new-form" method="post" action="">
+            <input type="hidden" ng-model="zone.id" value="{{zone.id}}" />
+            <div class="form-group">
+                <label for="Nom">Nom:</label>
+                <input class="form-control" type="text" ng-model="zone.nom" value="{{zone.nom}}" required />
+            </div>
+            <div class="form-group">
+                <label for="couleur">Couleur:</label>
+                <input id="idcouleur" class="form-control" type="color"  ng-model="zone.couleur" value="{{zone.couleur}}"  required />
+            </div>
+            <div >
+                <h1>Zones</h1>
+                <canvas id="canvasEdit" ng-click="doClick($event)" width="600" height="700" ng-model="zone.listePoints"></canvas>
+            </div>
+            <button class="btn btn-primary" ng-disabled="isUnchanged(zone)" id="add-new-btn" ng-click="update(zone)">Update <span class="glyphicon glyphicon-floppy-disk"></span></button>
+            <button class="btn btn-danger" ng-click="delete(zone)">Delete <span class="glyphicon glyphicon-trash"></span></button>
+            <a href="#/" class="btn">Cancel</a>
+        </form>
+    </div>
+</div>
